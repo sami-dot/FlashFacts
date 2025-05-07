@@ -1,0 +1,20 @@
+{
+    "name": "flashfacts",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "nodemon server/server.js",
+        "client": "npm --prefix client run dev"
+    },
+    "devDependencies": {
+        "concurrently": "^7.6.0",
+        "nodemon": "^2.0.22"
+    },
+    "dependencies": {
+        "axios": "^1.9.0",
+        "dotenv": "^16.5.0",
+        "he": "^1.2.0",
+        "mongoose": "^8.14.1",
+        "react-router-dom": "^7.5.3"
+    }
+}
