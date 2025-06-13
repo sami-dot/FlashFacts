@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         NEXUS_URL = 'http://localhost:8081'
-        NEXUS_REPO = 'my-raw-repo'    // change to your Nexus repo name
+        NEXUS_REPO = 'flashfact-repo'    // change to your Nexus repo name
         CREDENTIALS_ID = 'nexus-creds' // Jenkins credential ID for Nexus
     }
 
