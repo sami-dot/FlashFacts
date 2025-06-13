@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import authRoutes from './routes/auth.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,6 +15,7 @@ app.use(express.json());
 import questionRoutes from './routes/questions.js';
 app.use('/api/questions', questionRoutes);
 console.log('✅ Routes mounted at /api/questions');
+app.use('/api/auth', authRoutes);
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/flashfacts', {
